@@ -1,0 +1,48 @@
+services:
+  minecraft:
+    container_name: minecraft
+    image: itzg/minecraft-server
+    volumes:
+      - minecraft:/data
+    environment:
+      DIFFICULTY: hard
+      ENABLE_ROLLING_LOGS: "true"
+      ENABLE_WHITELIST: "true"
+      ENFORCE_WHITELIST: "true"
+      EULA: "true"
+      FORCE_GAMEMODE: "true"
+      MAX_PLAYERS: 10
+      MEMORY: 8G
+      MOTD: The Fryer's Minecraft Server
+      NETWORK_COMPRESSION_THRESHOLD: 512
+      OPS: FryyourBacon
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      OVERRIDE_WHITELIST: "true"
+      PACKWIZ_URL: https://raw.githubusercontent.com/caycehouse/fabulously-optimized-server/master/pack.toml
+      RCON_CMDS_STARTUP: |-
+        gamerule doFireTick false
+        gamerule playersSleepingPercentage 0
+        scoreboard objectives setdisplay list ts_Deaths
+      SNOOPER_ENABLED: "false"
+      TYPE: FABRIC
+      TZ: America/New_York
+      USE_AIKAR_FLAGS: "true"
+      VANILLATWEAKS_SHARECODE: IvCbZR,xnqI8i
+      VERSION: 1.19
+      WHITELIST: FryyourBacon
+    ports:
+      - 25565:25565
+    network_mode: bridge
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '1'
+          memory: 2G
+volumes:
+  minecraft: {}
