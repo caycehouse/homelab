@@ -1,0 +1,28 @@
+services:
+  factorio:
+    container_name: factorio
+    image: factoriotools/factorio
+    volumes:
+      - data:/factorio
+    environment:
+      TOKEN: ***REMOVED***
+      USERNAME: FryyourBacon
+      SAVE_NAME: gamesave
+    ports:
+      - "34197:34197/udp"
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  data: {}
