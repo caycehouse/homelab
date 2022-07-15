@@ -1,0 +1,29 @@
+services:
+  satisfactory:
+    container_name: satisfactory
+    image: wolveix/satisfactory-server
+    volumes:
+      - satisfactory:/config
+    environment:
+      AUTOPAUSE: "false"
+      STEAMBETA: "true"
+    ports:
+      - 7777:7777/udp
+      - 15000:15000/udp
+      - 15777:15777/udp
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  satisfactory: {}
