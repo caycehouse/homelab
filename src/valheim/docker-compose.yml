@@ -1,0 +1,31 @@
+services:
+  valheim:
+    container_name: valheim
+    image: lloesche/valheim-server
+    cap_add:
+      - sys_nice
+    volumes:
+      - valheim:/data
+    environment:
+      SERVER_NAME: "The Fryer's Valheim Server"
+      SERVER_PASS: ""
+      TZ: America/New_York
+    ports:
+      - 2456-2457:2456-2457/udp
+    stop_grace_period: 2m
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  valheim: {}
