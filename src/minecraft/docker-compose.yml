@@ -29,7 +29,7 @@ services:
       USE_AIKAR_FLAGS: "true"
       VANILLATWEAKS_SHARECODE: IvCbZR,xnqI8i
       VERSION: 1.19
-      WHITELIST: FryyourBacon
+      WHITELIST: FryyourBacon,TrooperMikey,BongoSongo5,XCosmicPenguin,Mygreenburrito,gusano_18,ScrambleYourEggs,_Leslie_,Chappy___,Polypon,P_B_Butterscotch,prunejuice,Puss7Sla7er69,papachara,egggz56,skrongmeat,fedorakin
     ports:
       - 25565:25565
     restart: unless-stopped
