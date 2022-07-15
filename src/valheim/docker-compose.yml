@@ -8,7 +8,7 @@ services:
       - valheim:/data
     environment:
       SERVER_NAME: "The Fryer's Valheim Server"
-      SERVER_PASS: ""
+      SERVER_PASS: ${SERVER_PASS}
       TZ: America/New_York
     ports:
       - 2456-2457:2456-2457/udp
