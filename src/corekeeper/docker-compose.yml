@@ -4,6 +4,8 @@ services:
     image: tedtramonte/core-keeper-server
     volumes:
       - data:/data
+    environment:
+      GAME_ID: $GAME_ID
     restart: unless-stopped
 
   watchtower:
