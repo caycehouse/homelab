@@ -3,7 +3,9 @@ services:
     container_name: terraria
     image: ryshe/terraria:vanilla-latest
     volumes:
+      - config:/config
       - data:/root/.local/share/Terraria/Worlds
+      - logs:/terraria-server/logs
     environment:
       - WORLD_FILENAME=world.wld
     ports:
@@ -25,4 +27,6 @@ services:
     restart: unless-stopped
 
 volumes:
+  config: {}
   data: {}
+  logs: {}
