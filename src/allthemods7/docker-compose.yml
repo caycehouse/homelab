@@ -4,6 +4,7 @@ services:
     image: itzg/minecraft-server
     volumes:
       - data:/data
+      - modpacks:/modpacks:ro
     environment:
       DIFFICULTY: hard
       ENABLE_ROLLING_LOGS: "true"
@@ -20,7 +21,7 @@ services:
       OVERRIDE_WHITELIST: "true"
       SNOOPER_ENABLED: "false"
       TYPE: FORGE
-      GENERIC_PACK: https://mediafiles.forgecdn.net/files/3873/170/Server-Files-0.4.21.zip
+      GENERIC_PACK: /modpacks/Server-Files-0.4.21.zip
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
       VERSION: 1.18.2
@@ -46,3 +47,4 @@ services:
 
 volumes:
   data: {}
+  modpacks: {}
