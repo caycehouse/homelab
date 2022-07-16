@@ -4,10 +4,6 @@ services:
     image: factoriotools/factorio:stable
     volumes:
       - data:/factorio
-    environment:
-      TOKEN: ***REMOVED***
-      USERNAME: FryyourBacon
-      SAVE_NAME: gamesave
     ports:
       - "34197:34197/udp"
     restart: unless-stopped
