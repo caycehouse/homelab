@@ -1,7 +1,7 @@
 services:
   terraria:
     container_name: terraria
-    image: ryshe/terraria:vanilla-latest
+    image: ryshe/terraria
     volumes:
       - data:/root/.local/share/Terraria/Worlds
     environment:
