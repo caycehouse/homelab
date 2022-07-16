@@ -1,0 +1,29 @@
+services:
+  foundry:
+    container_name: foundry
+    image: felddy/foundryvtt:release
+    init: true
+    volumes:
+      - foundry:/data
+    environment:
+      FOUNDRY_PASSWORD: $FOUNDRY_PASSWORD
+      FOUNDRY_USERNAME: $FOUNDRY_USERNAME
+      FOUNDRY_ADMIN_KEY: $FOUNDRY_ADMIN_KEY
+    ports:
+      - 30000:30000/tcp
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  foundry: {}
