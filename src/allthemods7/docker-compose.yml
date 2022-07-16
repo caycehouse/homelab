@@ -20,6 +20,7 @@ services:
       OVERRIDE_WHITELIST: "true"
       SNOOPER_ENABLED: "false"
       TYPE: CURSEFORGE
+      CF_BASE_DIR: /data
       CF_SERVER_MOD: https://mediafiles.forgecdn.net/files/3873/170/Server-Files-0.4.21.zip
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
