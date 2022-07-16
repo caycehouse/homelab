@@ -21,7 +21,6 @@ services:
       SNOOPER_ENABLED: "false"
       TYPE: FTBA
       TZ: America/New_York
-      USE_AIKAR_FLAGS: "true"
       FTB_MODPACK_ID: 91
       VERSION: 1.16.5
       WHITELIST: FryyourBacon,ScrambleYourEggs
