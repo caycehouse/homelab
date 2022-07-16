@@ -1,7 +1,7 @@
 services:
   oceanblock:
     container_name: oceanblock
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java8
     volumes:
       - data:/data
     environment:
