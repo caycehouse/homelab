@@ -1,7 +1,7 @@
 services:
   factorio:
     container_name: factorio
-    image: factoriotools/factorio
+    image: factoriotools/factorio:stable
     volumes:
       - data:/factorio
     environment:
