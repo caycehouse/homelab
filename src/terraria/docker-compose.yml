@@ -1,0 +1,26 @@
+services:
+  terraria:
+    container_name: terraria
+    image: ryshe/terraria:vanilla-latest
+    volumes:
+      - data:/root/.local/share/Terraria/Worlds
+    environment:
+      - WORLD_FILENAME=world.wld
+    ports:
+      - 7777:7777
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  data: {}
