@@ -9,6 +9,8 @@ services:
     ports:
       - 7777:7777
     restart: unless-stopped
+    tty: true
+    stdin_open: true
 
   watchtower:
     container_name: watchtower
