@@ -1,7 +1,7 @@
 services:
   allthemods7:
     container_name: allthemods7
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java17
     volumes:
       - data:/data
     environment:
@@ -20,9 +20,7 @@ services:
       OVERRIDE_WHITELIST: "true"
       SNOOPER_ENABLED: "false"
       TYPE: CURSEFORGE
-      CF_BASE_DIR: /data
       CF_SERVER_MOD: https://mediafiles.forgecdn.net/files/3873/170/Server-Files-0.4.21.zip
-      USE_MODPACK_START_SCRIPT: "false"
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
       VERSION: 1.18.2
