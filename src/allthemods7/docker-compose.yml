@@ -6,7 +6,7 @@ services:
       - data:/data
       - modpacks:/modpacks:ro
     environment:
-      DIFFICULTY: hard
+      DIFFICULTY: normal
       ENABLE_ROLLING_LOGS: "true"
       ENABLE_WHITELIST: "true"
       ENFORCE_WHITELIST: "true"
