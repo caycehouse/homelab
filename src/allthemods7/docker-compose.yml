@@ -12,7 +12,6 @@ services:
       ENFORCE_WHITELIST: "true"
       EULA: "true"
       FORCE_GAMEMODE: "true"
-      DEBUG: "true"
       MAX_PLAYERS: 10
       MEMORY: 8G
       MOTD: The Fryer's All The Mods 7 Server
