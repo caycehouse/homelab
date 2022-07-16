@@ -9,7 +9,7 @@ services:
     environment:
       - WORLD_FILENAME=world.wld
     ports:
-      - 7777:7777
+      - 7778:7777
     restart: unless-stopped
     tty: true
     stdin_open: true
