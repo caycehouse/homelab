@@ -4,10 +4,6 @@ services:
     image: tedtramonte/core-keeper-server
     volumes:
       - data:/data
-    environment:
-      DIRECT_CONNECT: 1
-    ports:
-      - 27015:27015
     restart: unless-stopped
 
   watchtower:
