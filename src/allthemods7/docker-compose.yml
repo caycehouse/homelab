@@ -12,6 +12,8 @@ services:
       ENFORCE_WHITELIST: "true"
       EULA: "true"
       FORCE_GAMEMODE: "true"
+      FORGEVERSION: 40.1.60
+      GENERIC_PACK: /modpacks/Server-Files-0.4.21.zip
       MAX_PLAYERS: 10
       MEMORY: 8G
       MOTD: The Fryer's All The Mods 7 Server
@@ -20,12 +22,13 @@ services:
       OVERRIDE_SERVER_PROPERTIES: "true"
       OVERRIDE_WHITELIST: "true"
       SNOOPER_ENABLED: "false"
+      SIMULATION_DISTANCE: 4
+      SYNC_CHUNK_WRITES: "false"
       TYPE: FORGE
-      GENERIC_PACK: /modpacks/Server-Files-0.4.21.zip
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
       VERSION: 1.18.2
-      FORGEVERSION: 40.1.60
+      VIEW_DISTANCE: 7
       WHITELIST: FryyourBacon,ScrambleYourEggs
     ports:
       - 25567:25565

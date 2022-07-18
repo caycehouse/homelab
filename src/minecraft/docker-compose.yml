@@ -24,11 +24,14 @@ services:
         gamerule playersSleepingPercentage 0
         scoreboard objectives setdisplay list ts_Deaths
       SNOOPER_ENABLED: "false"
+      SIMULATION_DISTANCE: 4
+      SYNC_CHUNK_WRITES: "false"
       TYPE: FABRIC
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
       VANILLATWEAKS_SHARECODE: IvCbZR,xnqI8i
       VERSION: 1.19
+      VIEW_DISTANCE: 7
       WHITELIST: FryyourBacon,TrooperMikey,BongoSongo5,XCosmicPenguin,Mygreenburrito,gusano_18,ScrambleYourEggs,_Leslie_,Chappy___,Polypon,P_B_Butterscotch,prunejuice,egggz56,fedorakin
     ports:
       - 25565:25565

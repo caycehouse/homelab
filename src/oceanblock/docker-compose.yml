@@ -19,10 +19,12 @@ services:
       OVERRIDE_SERVER_PROPERTIES: "true"
       OVERRIDE_WHITELIST: "true"
       SNOOPER_ENABLED: "false"
+      SYNC_CHUNK_WRITES: "false"
       TYPE: FTBA
       TZ: America/New_York
       FTB_MODPACK_ID: 91
       VERSION: 1.16.5
+      VIEW_DISTANCE: 7
       WHITELIST: FryyourBacon,ScrambleYourEggs
     ports:
       - 25566:25565
