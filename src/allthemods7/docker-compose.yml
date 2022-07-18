@@ -4,15 +4,16 @@ services:
     image: itzg/minecraft-server:java17
     volumes:
       - data:/data
+      - modpacks:/modpacks:ro
     environment:
-      CF_BASE_DIR: /data
-      CF_SERVER_MOD: https://mediafiles.forgecdn.net/files/3881/578/Server-Files-0.4.22.zip
       DIFFICULTY: hard
       ENABLE_ROLLING_LOGS: "true"
       ENABLE_WHITELIST: "true"
       ENFORCE_WHITELIST: "true"
       EULA: "true"
       FORCE_GAMEMODE: "true"
+      FORGEVERSION: 40.1.60
+      GENERIC_PACK: /modpacks/atms7.zip
       MAX_PLAYERS: 10
       MEMORY: 8G
       MOTD: The Fryer's All The Mods 7 Server
@@ -23,7 +24,7 @@ services:
       SNOOPER_ENABLED: "false"
       SIMULATION_DISTANCE: 4
       SYNC_CHUNK_WRITES: "false"
-      TYPE: CURSEFORGE
+      TYPE: FORGE
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
       VERSION: 1.18.2
@@ -49,3 +50,4 @@ services:
 
 volumes:
   data: {}
+  modpacks: {}
