@@ -19,10 +19,12 @@ services:
       OVERRIDE_SERVER_PROPERTIES: "true"
       OVERRIDE_WHITELIST: "true"
       PACKWIZ_URL: https://raw.githubusercontent.com/caycehouse/fabulously-optimized-server/master/pack.toml
+      QUERY_PORT: 25565
       RCON_CMDS_STARTUP: |-
         gamerule doFireTick false
         gamerule playersSleepingPercentage 0
         scoreboard objectives setdisplay list ts_Deaths
+      SERVER_PORT: 25565
       SNOOPER_ENABLED: "false"
       SIMULATION_DISTANCE: 4
       SYNC_CHUNK_WRITES: "false"
