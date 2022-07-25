@@ -15,9 +15,8 @@ services:
       FORGEVERSION: 40.1.60
       GENERIC_PACK: /modpacks/atms7.zip
       MAX_PLAYERS: 10
-      MEMORY: 8G
+      MEMORY: 10G
       MOTD: The Fryer's All The Mods 7 Server
-      NETWORK_COMPRESSION_THRESHOLD: 512
       OPS: FryyourBacon
       OVERRIDE_SERVER_PROPERTIES: "true"
       OVERRIDE_WHITELIST: "true"
@@ -31,7 +30,7 @@ services:
       USE_AIKAR_FLAGS: "true"
       VERSION: 1.18.2
       VIEW_DISTANCE: 7
-      WHITELIST: FryyourBacon,ScrambleYourEggs
+      WHITELIST: FryyourBacon
     ports:
       - 25567:25565
     restart: unless-stopped

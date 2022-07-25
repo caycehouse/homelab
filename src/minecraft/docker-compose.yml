@@ -12,9 +12,8 @@ services:
       EULA: "true"
       FORCE_GAMEMODE: "true"
       MAX_PLAYERS: 10
-      MEMORY: 8G
+      MEMORY: 10G
       MOTD: The Fryer's Minecraft Server
-      NETWORK_COMPRESSION_THRESHOLD: 512
       OPS: FryyourBacon
       OVERRIDE_SERVER_PROPERTIES: "true"
       OVERRIDE_WHITELIST: "true"
