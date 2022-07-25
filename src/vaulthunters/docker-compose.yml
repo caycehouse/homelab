@@ -8,6 +8,7 @@ services:
       CF_BASE_DIR: /data
       CF_SERVER_MOD: https://mediafiles.forgecdn.net/files/3853/291/VaultHunters-OfficialModpack-1.13.4-Server.zip
       DIFFICULTY: normal
+      ENABLE_COMMAND_BLOCK: "true"
       ENABLE_ROLLING_LOGS: "true"
       ENABLE_WHITELIST: "true"
       ENFORCE_WHITELIST: "true"
@@ -15,6 +16,7 @@ services:
       FORCE_GAMEMODE: "true"
       MAX_PLAYERS: 10
       MEMORY: 8G
+      MODS: https://mediafiles.forgecdn.net/files/3358/883/dynviewdist-2.0.jar
       MOTD: The Fryer's VaultHunters Server
       NETWORK_COMPRESSION_THRESHOLD: 512
       OPS: FryyourBacon
