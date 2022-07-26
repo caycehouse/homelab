@@ -23,7 +23,7 @@ services:
       OVERRIDE_WHITELIST: "true"
       QUERY_PORT: 25565
       RCON_CMDS_STARTUP: |-
-        /pregen start gen Overworld SQUARE 0 0 200
+        /pregen start gen radius Overworld SQUARE 0 0 200
       RCON_CMDS_FIRST_CONNECT: |-
         /pregen pause
       RCON_CMDS_LAST_DISCONNECT: |-
