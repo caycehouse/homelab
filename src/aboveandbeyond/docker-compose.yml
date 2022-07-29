@@ -26,6 +26,7 @@ services:
       TYPE: CURSEFORGE
       TZ: America/New_York
       USE_AIKAR_FLAGS: "true"
+      USE_MODPACK_START_SCRIPT: "false"
       VERSION: 1.16.5
       VIEW_DISTANCE: 7
       WHITELIST: FryyourBacon
