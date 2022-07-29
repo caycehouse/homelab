@@ -1,0 +1,51 @@
+services:
+  aboveandbeyond:
+    container_name: aboveandbeyond
+    image: itzg/minecraft-server:java8-multiarch
+    volumes:
+      - data:/data
+    environment:
+      CF_BASE_DIR: /data
+      CF_SERVER_MOD: https://mediafiles.forgecdn.net/files/3567/576/Above+and+Beyond-1.3-Server.zip
+      DIFFICULTY: hard
+      ENABLE_ROLLING_LOGS: "true"
+      ENABLE_WHITELIST: "true"
+      ENFORCE_WHITELIST: "true"
+      EULA: "true"
+      FORCE_GAMEMODE: "true"
+      MAX_PLAYERS: 10
+      MEMORY: 10G
+      MOTD: The Fryer's Above and Beyond Server
+      OPS: FryyourBacon
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      OVERRIDE_WHITELIST: "true"
+      QUERY_PORT: 25565
+      SERVER_PORT: 25565
+      SNOOPER_ENABLED: "false"
+      SYNC_CHUNK_WRITES: "false"
+      TYPE: CURSEFORGE
+      TZ: America/New_York
+      USE_AIKAR_FLAGS: "true"
+      VERSION: 1.16.5
+      VIEW_DISTANCE: 7
+      WHITELIST: FryyourBacon
+    ports:
+      - 25569:25565
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: America/New_York
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_SCHEDULE: 0 0 4 * * *
+      WATCHTOWER_TIMEOUT: 300s
+    restart: unless-stopped
+
+volumes:
+  data: {}
